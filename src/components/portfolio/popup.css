@@ -1,0 +1,74 @@
+.popup {
+  position: fixed;
+  z-index: 999999;
+  top: 0;
+  left: 0;
+  width: 100%;
+  min-height: 100vh;
+  background-color: rgba(0, 0, 0, 0.2);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.popup_inner {
+  position: relative;
+  overflow-y: auto;
+  padding: 4rem 10rem;
+  width: 65%;
+  max-width: calc(100vw - 4rem);
+  max-height: calc(100vh - 5rem);
+  background: var(--color-bg-variant);
+}
+
+.popup_inner .close_btn {
+  position: absolute;
+  top: 1.5rem;
+  right: 1.5rem;
+  cursor: pointer;
+}
+h2 {
+  color: var(--color-primary);
+}
+h3 {
+  margin-top: 4rem;
+  color: var(--color-primary-variant);
+}
+
+h4 {
+  margin-top: 2rem;
+  color: var(--color-primary-variant);
+}
+.popup_li_span {
+  color: var(--color-primary-variant);
+}
+
+.scroll_item {
+  position: absolute;
+  top: 50%;
+  right: 1rem;
+  transform: rotate(90deg);
+  color: var(--color-primary-variant);
+}
+
+/* ============ Media Query Tablet ============ */
+@media screen and (max-width: 1150px) {
+  .popup_inner {
+    padding: 4rem 5rem;
+    width: 85%;
+  }
+  .scroll_item {
+    display: none;
+  }
+}
+
+/* ============ Media Query Phone ============ */
+@media screen and (max-width: 750px) {
+  .popup_inner {
+    padding: 4rem 1rem;
+    width: 90%;
+  }
+  .scroll_item {
+    display: none;
+  }
+}
